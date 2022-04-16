@@ -1,0 +1,57 @@
+dataset:
+  glove_vec_path: /home/ifrahmaqsood/fvqa_dataset_mucko/glove300dvocab.npy
+  img_norm: 1
+  max_question_length: 25
+  vocab_min_count: 1
+  word_counts_json: /home/ifrahmaqsood/fvqa_dataset_mucko/word_count.json
+model:
+  cross_gcn1_gate_dim: 128
+  cross_gcn1_img_att_proj_dim: 300
+  cross_gcn1_out_dim: 300
+  cross_gcn1_sem_att_proj_dim: 300
+  cross_gcn2_gate_dim: 128
+  cross_gcn2_img_att_proj_dim: 300
+  cross_gcn2_out_dim: 300
+  cross_gcn2_sem_att_proj_dim: 300
+  dropout: 0.5
+  fact_gcn1_out_dim: 300
+  fact_gcn2_out_dim: 300
+  fact_gcn3_out_dim: 300
+  fact_node_att_ques_node_proj_dims: 512
+  fact_node_att_ques_node_proj_dims2: 300
+  fact_node_att_ques_node_proj_dims3: 300
+  fact_node_dims: 300
+  glove_embedding_size: 300
+  image_gcn1_out_dim: 1024
+  image_gcn2_out_dim: 300
+  img_feature_size: 2048
+  lstm_hidden_size: 512
+  lstm_num_layers: 2
+  node_att_ques_img_proj_dims: 2048
+  node_att_ques_img_proj_dims2: 300
+  rel_att_ques_rel_proj_dims: 512
+  rel_att_ques_rel_proj_dims2: 300
+  sem_node_att_ques_img_proj_dims: 512
+  sem_node_att_ques_img_proj_dims2: 512
+  sem_node_dims: 300
+  sem_rel_att_ques_rel_proj_dims: 512
+  sem_rel_att_ques_rel_proj_dims2: 512
+  sem_relation_dims: 300
+  semantic_gcn1_out_dim: 300
+  semantic_gcn2_out_dim: 300
+  vis_relation_dims: 5
+  word_embedding_size: 300
+solver:
+  batch_size: 64
+  eta_min: 0.00034
+  initial_lr: 0.001
+  lr_gamma: 0.7
+  lr_milestones:
+  - 5
+  - 7
+  - 10
+  neg_weight: 0.2
+  num_epochs: 10
+  pos_weight: 0.8
+  warmup_epochs: 2
+  warmup_factor: 0.2
